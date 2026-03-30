@@ -1,6 +1,6 @@
 # Exercício - Montagem de GUI em Flutter
 
-![Tela1](MensagemCancela.png)
+![Tela1](MensagemCancelada.png)
 
 ![Tela1=2](DadosSalvos.png)
 
