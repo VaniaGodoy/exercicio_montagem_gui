@@ -1,0 +1,137 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: TelaCadastro(),
+    );
+  }
+}
+
+class TelaCadastro extends StatelessWidget {
+  const TelaCadastro({super.key});
+
+  void _mostrarDialogo(BuildContext context, String mensagem) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text("Mensagem"),
+          content: Text(mensagem),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text("OK"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  // 🔹 Input padrão (evita repetir código)
+  InputDecoration _inputDecoration(String hint) {
+    return InputDecoration(
+      hintText: hint,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(6), // menos arredondado
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Exercício Montagem GUI"),
+        backgroundColor: Colors.blue,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "TELA DE CADASTRO",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            // NOME
+            const Text("NOME:"),
+            const SizedBox(height: 5),
+            TextField(
+              decoration: _inputDecoration("Digite o nome"),
+            ),
+
+            const SizedBox(height: 15),
+
+            // ENDEREÇO
+            const Text("ENDEREÇO:"),
+            const SizedBox(height: 5),
+            TextField(
+              decoration: _inputDecoration("Digite o endereço"),
+            ),
+
+            const SizedBox(height: 15),
+
+            // EMAIL
+            const Text("EMAIL:"),
+            const SizedBox(height: 5),
+            TextField(
+              decoration: _inputDecoration("Digite o email"),
+            ),
+
+            const SizedBox(height: 20),
+
+            // BOTÕES
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    _mostrarDialogo(context, "Mensagem cancelada");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                  child: const Text("CANCELAR"),
+                ),
+                const SizedBox(width: 15),
+                ElevatedButton(
+                  onPressed: () {
+                    _mostrarDialogo(context, "Dados salvos!");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                  child: const Text("SALVAR"),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
