@@ -2,14 +2,15 @@
 
 ![Tela1](MensagemCancelada.png)
 
-![Tela12](DadosSalvos.png)
+![Tela2](DadosSalvos.png)
 
 ## Descrição
 
 Este projeto foi desenvolvido com o objetivo de praticar a construção de interfaces gráficas (GUI) utilizando Flutter.
 
-A aplicação consiste em uma tela de cadastro simples, contendo campos de entrada e botões, sem implementação de lógica de negócio, 
-conforme solicitado na atividade, contendo as caizas de dialogo ao clicar nos botões.
+A aplicação consiste em uma tela de cadastro simples, contendo campos de entrada e botões, sem implementação de lógica
+
+conforme solicitado na atividade, contendo as caixas de dialogo ao clicar nos botões.
 
 ---
 
