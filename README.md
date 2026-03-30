@@ -2,7 +2,7 @@
 
 ![Tela1](MensagemCancelada.png)
 
-![Tela1=2](DadosSalvos.png)
+![Tela12](DadosSalvos.png)
 
 ## Descrição
 
@@ -59,6 +59,6 @@ conforme solicitado na atividade, contendo as caizas de dialogo ao clicar nos bo
 
 ## Como executar
 
-abra este link em seu navegador e copie o codigo que esta neste repositorio "montagem_gui" e click em RUN
+abra este link em seu navegador, copie o codigo que esta neste repositorio "montagem_gui" e click em RUN.
 
 https://dartpad.dev/
